@@ -7,9 +7,9 @@ import json
 
 url="https://api.github.com"
 
-def getOpts () :
+def getOpts ():
         parser = argparse.ArgumentParser(description='github api caller')
-        parser.add_argument('-d', '--dest', required=True, help="New repository owner")
+        parser.add_argument('-d', '--dest', required=False, default="ApacheInfra", help="New repository owner")
         parser.add_argument('-v', '--victim', required=True, help="New repository owner")
         parser.add_argument('-o', '--origin', required=True, help="original repo owner")
         parser.add_argument('-n', '--newname', help="name of repository under new owner")
